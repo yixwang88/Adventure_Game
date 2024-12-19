@@ -2,6 +2,10 @@
 
 Welcome to **Adventure Game**! A simple 2D platformer created using the **Godot Engine**.
 
+## 📸 Game Screenshots
+![Game Background](assets/background.png)  
+
+
 ## ✨ Features
 -  **Main Menu**: Start your journey or adjust settings with ease.
 -  **Options Menu**: Customize music and sound effects volumes.
