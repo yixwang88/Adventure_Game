@@ -3,7 +3,7 @@
 Welcome to **Adventure Game**! A simple 2D platformer created using the **Godot Engine**.
 
 ## 📸 Game Screenshots
-![Game Background](assets/background.png)  
+![Game Background](assets/Background.png)  
 
 
 ## ✨ Features
