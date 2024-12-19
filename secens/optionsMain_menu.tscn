@@ -1,0 +1,135 @@
+[gd_scene load_steps=10 format=3 uid="uid://ciu75us1jqxlw"]
+
+[ext_resource type="Script" path="res://scripts/options_main_menu.gd" id="1_baohy"]
+[ext_resource type="Texture2D" uid="uid://cwq4uw16ejj80" path="res://assets/Background.png" id="2_2gkrn"]
+[ext_resource type="Script" path="res://scripts/volume.gd" id="3_5lo5f"]
+[ext_resource type="FontFile" uid="uid://dpn0448ujs1qo" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="3_oowqk"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_73gdn"]
+texture = ExtResource("2_2gkrn")
+modulate_color = Color(0.408329, 0.408329, 0.408329, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_qxg8h"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mnfng"]
+bg_color = Color(0.62601, 0.3906, 0.63, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mp7mw"]
+bg_color = Color(0.2, 0.16, 0.2, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_e8x4p"]
+bg_color = Color(1, 0.8, 1, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[node name="optionsMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_baohy")
+
+[node name="background" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_73gdn")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -198.0
+offset_top = -129.0
+offset_right = 198.0
+offset_bottom = 191.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 30
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 40
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 40
+
+[node name="Label" type="Label" parent="VBoxContainer/VBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_oowqk")
+theme_override_font_sizes/font_size = 24
+text = "Music Volume"
+
+[node name="music" type="HSlider" parent="VBoxContainer/VBoxContainer/VBoxContainer"]
+layout_mode = 2
+max_value = 1.0
+step = 0.001
+script = ExtResource("3_5lo5f")
+bus_name = "Music"
+
+[node name="Label2" type="Label" parent="VBoxContainer/VBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_oowqk")
+theme_override_font_sizes/font_size = 24
+text = "Sound Effect"
+
+[node name="Sound Effect" type="HSlider" parent="VBoxContainer/VBoxContainer/VBoxContainer"]
+layout_mode = 2
+max_value = 1.0
+step = 0.001
+script = ExtResource("3_5lo5f")
+bus_name = "SFX"
+
+[node name="back" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_oowqk")
+theme_override_font_sizes/font_size = 24
+theme_override_styles/focus = SubResource("StyleBoxEmpty_qxg8h")
+theme_override_styles/hover = SubResource("StyleBoxFlat_mnfng")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_mp7mw")
+theme_override_styles/normal = SubResource("StyleBoxFlat_e8x4p")
+text = "Back
+"
+
+[node name="gameName" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -310.0
+offset_top = 27.0
+offset_right = 310.0
+offset_bottom = 127.0
+grow_horizontal = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 5
+theme_override_constants/shadow_offset_y = 10
+theme_override_fonts/font = ExtResource("3_oowqk")
+theme_override_font_sizes/font_size = 48
+text = "Adventure Game"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="VBoxContainer/back" to="." method="_on_exit_pressed"]
+[connection signal="pressed" from="VBoxContainer/back" to="." method="_on_back_pressed"]
