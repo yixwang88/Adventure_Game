@@ -1,18 +1,19 @@
-[gd_scene load_steps=17 format=3 uid="uid://dygk1utiqe8d1"]
+[gd_scene load_steps=18 format=3 uid="uid://8i7xje0eys6k"]
 
-[ext_resource type="Script" path="res://scripts/game_manager.gd" id="1_bhll8"]
-[ext_resource type="FontFile" uid="uid://dpn0448ujs1qo" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="2_rc2h6"]
-[ext_resource type="Texture2D" uid="uid://bdomoe6xmd3je" path="res://assets/sprites/world_tileset.png" id="3_k5p74"]
-[ext_resource type="PackedScene" uid="uid://dnokqapbcgvei" path="res://secens/player.tscn" id="4_c7xb2"]
-[ext_resource type="PackedScene" uid="uid://dxeiolhtqlctv" path="res://secens/killzone.tscn" id="5_cm7i6"]
-[ext_resource type="PackedScene" uid="uid://jtmhw0wcw5jd" path="res://secens/Coin.tscn" id="6_ejkkx"]
-[ext_resource type="PackedScene" uid="uid://cv4kok6dciak8" path="res://secens/gray_platform.tscn" id="7_insdb"]
-[ext_resource type="PackedScene" uid="uid://cyalayrxavcpa" path="res://secens/platform.tscn" id="8_r3f4e"]
-[ext_resource type="FontFile" uid="uid://cmviub7c0qn26" path="res://assets/fonts/PixelOperator8.ttf" id="9_6myol"]
-[ext_resource type="PackedScene" uid="uid://bgdnq8whvylam" path="res://secens/slime.tscn" id="10_8ha2x"]
+[ext_resource type="Texture2D" uid="uid://bdomoe6xmd3je" path="res://assets/sprites/world_tileset.png" id="1_4y4mx"]
+[ext_resource type="Script" path="res://scripts/game_manager.gd" id="1_y8mik"]
+[ext_resource type="PackedScene" uid="uid://dnokqapbcgvei" path="res://secens/player.tscn" id="2_0uopt"]
+[ext_resource type="FontFile" uid="uid://dpn0448ujs1qo" path="res://assets/fonts/PixelOperator8-Bold.ttf" id="2_7ehqf"]
+[ext_resource type="PackedScene" uid="uid://cyalayrxavcpa" path="res://secens/platform.tscn" id="3_fs42v"]
+[ext_resource type="PackedScene" uid="uid://cv4kok6dciak8" path="res://secens/gray_platform.tscn" id="4_kh8pn"]
+[ext_resource type="PackedScene" uid="uid://jtmhw0wcw5jd" path="res://secens/Coin.tscn" id="5_80eri"]
+[ext_resource type="PackedScene" uid="uid://dxeiolhtqlctv" path="res://secens/killzone.tscn" id="6_5o4lq"]
+[ext_resource type="PackedScene" uid="uid://bgdnq8whvylam" path="res://secens/slime.tscn" id="7_tbj0c"]
+[ext_resource type="FontFile" uid="uid://cmviub7c0qn26" path="res://assets/fonts/PixelOperator8.ttf" id="9_mcx73"]
+[ext_resource type="PackedScene" uid="uid://d2j2mguqpol8x" path="res://secens/next_level.tscn" id="11_5633d"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3illy"]
-texture = ExtResource("3_k5p74")
+texture = ExtResource("1_4y4mx")
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 1:0/0 = 0
@@ -227,14 +228,14 @@ _data = {
 
 [node name="GameManager" type="Node" parent="."]
 unique_name_in_owner = true
-script = ExtResource("1_bhll8")
+script = ExtResource("1_y8mik")
 
 [node name="ScoreLabel" type="Label" parent="GameManager"]
 offset_left = 478.0
 offset_top = -204.0
 offset_right = 614.0
 offset_bottom = -181.0
-theme_override_fonts/font = ExtResource("2_rc2h6")
+theme_override_fonts/font = ExtResource("2_7ehqf")
 theme_override_font_sizes/font_size = 8
 text = "You collected X coins."
 
@@ -247,7 +248,7 @@ layer_0/tile_data = PackedInt32Array(262137, 131073, 15, 327673, 131073, 15, 393
 layer_1/name = "mid"
 layer_1/tile_data = PackedInt32Array(0, 1, 0, 1, 1, 0, 196606, 1, 0, 196607, 1, 0, 131074, 393217, 0, 131075, 393217, 0, 131076, 393217, 0, 131080, 393217, 0, 131081, 393217, 0, 131084, 393217, 1, 131085, 393217, 1, 262142, 1, 1, 262143, 1, 1, 327679, 65537, 0, 327678, 1, 1, 65536, 1, 1, 131072, 1, 1, 196608, 1, 1, 262144, 1, 1, 262145, 1, 1, 196609, 1, 1, 131073, 65537, 1, 65537, 1, 1, 196610, 393217, 1, 196611, 393217, 1, 196612, 393217, 1, 262148, 393217, 1, 262147, 393217, 1, 262146, 393217, 1, 196616, 393217, 1, 262152, 393217, 1, 262153, 393217, 1, 196617, 393217, 1, 196620, 393217, 1, 262156, 393217, 1, 262157, 393217, 1, 196621, 524289, 1, -262140, 65537, 1, -196604, 1, 1, -327676, 1, 0, -327675, 1, 0, -196602, 1, 0, -196601, 1, 0, -196598, 1, 0, -262133, 1, 0, -262132, 1, 0, -196595, 1, 0, -196603, 1, 1, -262139, 1, 1, -131066, 1, 1, -131065, 1, 1, -131062, 1, 1, -131061, 1, 1, -131060, 1, 1, -131059, 1, 1, -196596, 1, 1, -196597, 1, 1, 131077, 589825, 0, 131078, 655361, 0, 131079, 720897, 0, -196594, 262145, 0, -196593, 262145, 0, -196592, 262145, 0, -131058, 262145, 1, -131057, 262145, 1, -131056, 262145, 1, -65520, 262145, 1, -65519, 262145, 1, 18, 262145, 1, -131055, 327681, 0, -65518, 327681, 1, -196600, 589825, 0, -196599, 720897, 0, -65517, 262145, 0, -65516, 262145, 0, 19, 262145, 1, 65555, 262145, 1, 131091, 262145, 1, 196627, 262145, 1, 262163, 327681, 0, 262164, 262145, 1, 196628, 262145, 1, 131092, 327681, 1, 65556, 262145, 1, 20, 262145, 1, 131070, 196609, 7, -3, 131073, 5, 65533, 131073, 6, -65538, 196609, 4, -2, 196609, 5, 65534, 196609, 6, -1, 262145, 5, -65537, 262145, 4, 65535, 262145, 6, 65545, 1, 8, -131053, 327681, 8, -262130, 524289, 6, -262128, 327681, 5, -327664, 327681, 3, -262138, 393217, 7, -196605, 1, 1, -262141, 1, 0, -65507, 131073, 0, -65506, 131073, 0, 29, 131073, 1, 65565, 131073, 1, 131101, 131073, 1, 196637, 131073, 1, 262173, 131073, 1, 262175, 131073, 1, 262176, 131073, 1, 262177, 131073, 1, 65569, 131073, 1, 65568, 131073, 1, 65567, 131073, 1, 65566, 131073, 1, 131102, 131073, 1, 196638, 131073, 1, 196639, 196609, 1, 196640, 131073, 1, 196641, 131073, 1, 131105, 196609, 1, 131104, 131073, 1, 131103, 131073, 1, 30, 196609, 0, 262174, 131073, 1, 32, 262145, 8, 65570, 131073, 1, 65571, 131073, 1, 65572, 131073, 1, 65573, 131073, 1, 65574, 131073, 1, 65575, 131073, 1, 131111, 131073, 1, 196647, 131073, 1, 262183, 196609, 1, 262182, 131073, 1, 262181, 131073, 1, 262180, 131073, 1, 262179, 131073, 1, 262178, 131073, 1, 196642, 196609, 0, 131106, 131073, 1, 131107, 131073, 1, 131108, 131073, 1, 131109, 131073, 1, 131110, 196609, 0, 196646, 131073, 1, 196645, 131073, 1, 196644, 131073, 1, 196643, 196609, 1, -65497, 131073, 0, -65498, 131073, 0, 39, 196609, 1, 38, 131073, 1, 37, 393217, 5, -65499, 393217, 4, -131035, 393217, 3, -65494, 327681, 0, -65493, 262145, 1, -131029, 327681, 1, -131028, 262145, 1, -196565, 262145, 0, -196564, 262145, 1, -131030, 262145, 0, -262100, 262145, 0, -262099, 589825, 1, -262098, 655361, 1, -262097, 655361, 1, -262096, 655361, 1, -262095, 655361, 1, -262094, 655361, 1, -262093, 720897, 1, -262092, 262145, 0, -262091, 262145, 0, -196556, 262145, 1, -196555, 262145, 1, -131019, 327681, 1, -327627, 327681, 5, -393163, 327681, 4, -458699, 327681, 3, -655325, 1, 5, -655324, 65537, 6, -589788, 1, 0, -589787, 1, 0, -589786, 1, 0, -524250, 1, 1, -589785, 1, 0, -524249, 65537, 1, -524248, 1, 1, -589789, 1, 0, -524253, 1, 1, -524252, 1, 1, -524251, 1, 1, -458714, 1, 1, -458713, 1, 1, -458712, 1, 1, -393176, 1, 1, -458711, 1, 0, -393175, 65537, 0, -458710, 1, 0, -393174, 1, 1, 196622, 393217, 1, 262158, 393217, 1, 262159, 393217, 1, 196623, 393217, 1, 262160, 524289, 0, 131086, 393217, 1, 131087, 393217, 1, 131088, 393217, 1, 196624, 393217, 1, 196625, 393217, 1, 262161, 393217, 1, 131089, 524289, 0, 131083, 524289, 1, 196619, 393217, 1, 262155, 393217, 1, 65547, 458753, 1, 65553, 458753, 1, -524254, 1, 1, -524255, 65537, 0, -524256, 1, 1, -524257, 1, 1, -524258, 1, 1, -524259, 1, 1, -524260, 1, 1, -524261, 1, 1, -524262, 1, 1, -589798, 1, 1, -655334, 1, 1, -720870, 1, 1, -786406, 65537, 0, -589797, 1, 0, -589796, 1, 0, -589795, 1, 0, -589794, 1, 0, -589793, 1, 0, -589792, 1, 0, -589791, 1, 0, -589790, 1, 0, -786407, 1, 1, -720871, 1, 1, -655335, 1, 1, -589799, 1, 1, -524263, 65537, 1, -851943, 1, 0, -851942, 1, 0, -851940, 196609, 5, -851939, 262145, 5, -786404, 196609, 6, -720868, 196609, 7, -655332, 196609, 8, -851941, 131073, 5, -917476, 196609, 4, -917475, 262145, 4, -786405, 131073, 6, -655333, 65537, 5, -720861, 1, 3)
 
-[node name="Player" parent="." instance=ExtResource("4_c7xb2")]
+[node name="Player" parent="." instance=ExtResource("2_0uopt")]
 position = Vector2(10, 0)
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
@@ -256,7 +257,7 @@ zoom = Vector2(4, 4)
 limit_bottom = 120
 position_smoothing_enabled = true
 
-[node name="Killzone" parent="." instance=ExtResource("5_cm7i6")]
+[node name="Killzone" parent="." instance=ExtResource("6_5o4lq")]
 position = Vector2(48, 97)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Killzone"]
@@ -264,81 +265,81 @@ shape = SubResource("WorldBoundaryShape2D_xbjpw")
 
 [node name="Coins" type="Node" parent="."]
 
-[node name="Coin" parent="Coins" instance=ExtResource("6_ejkkx")]
+[node name="Coin" parent="Coins" instance=ExtResource("5_80eri")]
 position = Vector2(56, 21)
 
-[node name="Coin2" parent="Coins" instance=ExtResource("6_ejkkx")]
+[node name="Coin2" parent="Coins" instance=ExtResource("5_80eri")]
 position = Vector2(95, 21)
 
-[node name="Coin3" parent="Coins" instance=ExtResource("6_ejkkx")]
+[node name="Coin3" parent="Coins" instance=ExtResource("5_80eri")]
 position = Vector2(130, 21)
 
-[node name="Coin4" parent="Coins" instance=ExtResource("6_ejkkx")]
+[node name="Coin4" parent="Coins" instance=ExtResource("5_80eri")]
 position = Vector2(59, -75)
 
-[node name="Coin5" parent="Coins" instance=ExtResource("6_ejkkx")]
+[node name="Coin5" parent="Coins" instance=ExtResource("5_80eri")]
 position = Vector2(131, -60)
 
-[node name="Coin6" parent="Coins" instance=ExtResource("6_ejkkx")]
+[node name="Coin6" parent="Coins" instance=ExtResource("5_80eri")]
 position = Vector2(162, -60)
 
-[node name="Coin7" parent="Coins" instance=ExtResource("6_ejkkx")]
+[node name="Coin7" parent="Coins" instance=ExtResource("5_80eri")]
 position = Vector2(375, -26)
 
-[node name="Coin8" parent="Coins" instance=ExtResource("6_ejkkx")]
+[node name="Coin8" parent="Coins" instance=ExtResource("5_80eri")]
 position = Vector2(283, -48)
 
-[node name="Coin9" parent="Coins" instance=ExtResource("6_ejkkx")]
+[node name="Coin9" parent="Coins" instance=ExtResource("5_80eri")]
 position = Vector2(301, -29)
 
-[node name="Coin10" parent="Coins" instance=ExtResource("6_ejkkx")]
+[node name="Coin10" parent="Coins" instance=ExtResource("5_80eri")]
 position = Vector2(490, -27)
 
-[node name="Coin11" parent="Coins" instance=ExtResource("6_ejkkx")]
+[node name="Coin11" parent="Coins" instance=ExtResource("5_80eri")]
 position = Vector2(25, -53)
 
-[node name="Coin12" parent="Coins" instance=ExtResource("6_ejkkx")]
+[node name="Coin12" parent="Coins" instance=ExtResource("5_80eri")]
 position = Vector2(543, -2)
 
-[node name="Coin13" parent="Coins" instance=ExtResource("6_ejkkx")]
+[node name="Coin13" parent="Coins" instance=ExtResource("5_80eri")]
 position = Vector2(566, -2)
 
-[node name="Coin14" parent="Coins" instance=ExtResource("6_ejkkx")]
+[node name="Coin14" parent="Coins" instance=ExtResource("5_80eri")]
 position = Vector2(1274, -282)
 
-[node name="Coin15" parent="Coins" instance=ExtResource("6_ejkkx")]
+[node name="Coin15" parent="Coins" instance=ExtResource("5_80eri")]
 position = Vector2(632, -154)
 
-[node name="Coin16" parent="Coins" instance=ExtResource("6_ejkkx")]
+[node name="Coin16" parent="Coins" instance=ExtResource("5_80eri")]
 position = Vector2(651, -139)
 
-[node name="Coin17" parent="Coins" instance=ExtResource("6_ejkkx")]
+[node name="Coin17" parent="Coins" instance=ExtResource("5_80eri")]
 position = Vector2(728, -73)
 
-[node name="Coin18" parent="Coins" instance=ExtResource("6_ejkkx")]
+[node name="Coin18" parent="Coins" instance=ExtResource("5_80eri")]
 position = Vector2(759, -71)
 
-[node name="Coin19" parent="Coins" instance=ExtResource("6_ejkkx")]
+[node name="Coin19" parent="Coins" instance=ExtResource("5_80eri")]
 position = Vector2(792, -71)
 
-[node name="Coin20" parent="Coins" instance=ExtResource("6_ejkkx")]
+[node name="Coin20" parent="Coins" instance=ExtResource("5_80eri")]
 position = Vector2(824, -73)
 
-[node name="Coin21" parent="Coins" instance=ExtResource("6_ejkkx")]
+[node name="Coin21" parent="Coins" instance=ExtResource("5_80eri")]
 position = Vector2(627, -27)
 
-[node name="Coin22" parent="Coins" instance=ExtResource("6_ejkkx")]
+[node name="Coin22" parent="Coins" instance=ExtResource("5_80eri")]
 position = Vector2(682, -44)
 
-[node name="Coin23" parent="Coins" instance=ExtResource("6_ejkkx")]
+[node name="Coin23" parent="Coins" instance=ExtResource("5_80eri")]
 position = Vector2(673, -123)
 
-[node name="Coin24" parent="Coins" instance=ExtResource("6_ejkkx")]
+[node name="Coin24" parent="Coins" instance=ExtResource("5_80eri")]
 position = Vector2(607, -154)
 
 [node name="Platforms" type="Node" parent="."]
 
-[node name="GrayPlatform" parent="Platforms" instance=ExtResource("7_insdb")]
+[node name="GrayPlatform" parent="Platforms" instance=ExtResource("4_kh8pn")]
 position = Vector2(352, -10)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Platforms/GrayPlatform"]
@@ -347,7 +348,7 @@ libraries = {
 }
 autoplay = "move"
 
-[node name="Platform" parent="Platforms" instance=ExtResource("8_r3f4e")]
+[node name="Platform" parent="Platforms" instance=ExtResource("3_fs42v")]
 position = Vector2(21, -36)
 
 [node name="Labels" type="Node" parent="."]
@@ -357,7 +358,7 @@ offset_left = -131.0
 offset_top = 27.0
 offset_right = -40.0
 offset_bottom = 50.0
-theme_override_fonts/font = ExtResource("9_6myol")
+theme_override_fonts/font = ExtResource("9_mcx73")
 theme_override_font_sizes/font_size = 8
 text = "Space to jump."
 
@@ -366,7 +367,7 @@ offset_left = 347.0
 offset_top = 8.0
 offset_right = 438.0
 offset_bottom = 31.0
-theme_override_fonts/font = ExtResource("9_6myol")
+theme_override_fonts/font = ExtResource("9_mcx73")
 theme_override_font_sizes/font_size = 8
 text = "Falling Hurts."
 
@@ -375,14 +376,17 @@ offset_left = 478.0
 offset_top = -222.0
 offset_right = 569.0
 offset_bottom = -199.0
-theme_override_fonts/font = ExtResource("9_6myol")
+theme_override_fonts/font = ExtResource("9_mcx73")
 theme_override_font_sizes/font_size = 8
 text = "You Made it!!"
 
+[node name="nextLevel" parent="Labels" instance=ExtResource("11_5633d")]
+position = Vector2(515, -186)
+
 [node name="Slimes" type="Node" parent="."]
 
-[node name="Slime2" parent="Slimes" instance=ExtResource("10_8ha2x")]
+[node name="Slime2" parent="Slimes" instance=ExtResource("7_tbj0c")]
 position = Vector2(503, 6)
 
-[node name="Slime" parent="Slimes" instance=ExtResource("10_8ha2x")]
+[node name="Slime" parent="Slimes" instance=ExtResource("7_tbj0c")]
 position = Vector2(200, 22)

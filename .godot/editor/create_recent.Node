@@ -1,0 +1,14 @@
+CollisionShape2D
+CollisionPolygon2D
+AnimationPlayer
+Timer
+RigidBody2D
+Area2D
+Sprite2D
+AnimationTree
+ColorRect
+CanvasLayer
+AnimatableBody2D
+Node
+StaticBody2D
+Node2D

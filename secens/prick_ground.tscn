@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://cquuqc3yxgj65"]
+
+[ext_resource type="Texture2D" uid="uid://1kf6cxcym7u7" path="res://assets/sprites/ci2.png" id="1_y6kar"]
+[ext_resource type="PackedScene" uid="uid://dxeiolhtqlctv" path="res://secens/killzone.tscn" id="2_jvx1y"]
+
+[node name="prickGround" type="StaticBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0.156251, 2.375)
+scale = Vector2(0.060625, 0.0695)
+texture = ExtResource("1_y6kar")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-0.0850522, -6.56835, -2.8067, 2.29496, -3.89536, 2.92806, -3.89536, 3.56115, -0.0850522, 6.72662, 4.26959, 3.56115, 3.18093, 2.29496, 2.09227, 0.395683)
+
+[node name="Killzone" parent="." instance=ExtResource("2_jvx1y")]
+position = Vector2(0.156251, 2.375)
+scale = Vector2(1.83712, 1.57954)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Killzone"]
+polygon = PackedVector2Array(-0.0850522, -6.56835, -2.8067, 2.29496, -3.89536, 2.92806, -3.89536, 3.56115, -0.0850522, 6.72662, 4.26959, 3.56115, 3.18093, 2.29496, 2.09227, 0.395683)
